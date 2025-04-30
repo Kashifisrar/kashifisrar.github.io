@@ -1,46 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HOPE - A charitable organization dedicated to supporting those in need through various services and community outreach">
+    <meta name="keywords" content="charity, hope, community support, donations, social services">
+    <title>HOPE: To Help</title>
+    
+    <!-- Fonts -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&family=Hubot+Sans:ital,wght@0,200..900;1,200..900&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Hubot+Sans:ital,wght@0,200..900;1,200..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
     </style>
     <script src="https://kit.fontawesome.com/f3348a7004.js" crossorigin="anonymous"></script>
-
-    <meta charset="utf-8">
-    <meta name ='viewport' content="width=device-width, initial-scale=1.0">
-    <title>HOPE: To Help</title>
     <link rel="stylesheet" type="text/css" href="styles/hope.css">
 </head>
-<body style="margin: 0;">
-
-<div id="Header">
-    <div id="nametright">
-        <h1 class="companytext">HOPE</h1>
-    </div>
-    <div id="menutleft" class="HideOnMobile">
-        <a class="menutext hover but" href="index.html">donate</a>
-        <a class="menutext hover but" href="index.html">contact</a>
-        <a class="menutext hover but" href="index.html">team</a>
-    </div>
-</div>
-<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 60%;">
-    <div id="outterbox" style="margin-top: 45px;">
-        <div class="leftbox">
-            <h1 class="textgeneric">A CLUB DEDICATED TO SUPPORTING THOSE IN NEED</h1>
+<body>
+    <!-- Header Section -->
+    <header id="Header">
+        <div id="innerHeader">
+            <div id="logo">
+                <h1 class="companytext">HOPE</h1>
+            </div>
+            <nav id="mainNav" class="HideOnMobile">
+                <!-- <a class="nav-link" href="#home">Home</a> -->
+                <!-- <a class="nav-link" href="#about">About</a> -->
+                <!-- <a class="nav-link" href="#services">Services</a> -->
+                <a class="nav-link" href="#donate">Donate</a>
+                <a class="nav-link" href="#contact">Contact</a>
+            </nav>
+            <button id="mobileMenuBtn" class="mobile-only">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
-        <div class="rightbox">
-            <h1 class="righttext" style="text-align: left"><i class="fa-solid fa-hand-holding-hand" style="color: #857412;"></i></h1>
-        </div>
-    </div>
-</div>
+    </header>
 
-<div id="outterbox" style="background-color: darkgoldenrod; left: 0; width: 100%;">
-    <div id="innerbox">
-        <h1 class="destext">Coming Soon...</h1>
-    </div>
-</div>
-<div id="Footer">
-    <div id="innerbox" style="background-color: black; height: 30%; border-radius: 0">
-        <h1 class="footertext">Made with Love</h1>
-        <h1 class="footertext"></h1>
-    </div>
-</div>
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 style="text-transform: uppercase;">Join us in making a difference in our community</h1>
+                <p>A CLUB DEDICATED TO SUPPORTING THOSE IN NEED</p>
+                <!-- <a href="#donate" class="cta-button">Donate Now</a> -->
+            </div>
+            <div class="hero-icon">
+                <i class="fa-solid fa-hand-holding-hand"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <!-- <section id="about">
+        <div class="section-content">
+            <h2>About HOPE</h2>
+            <p>We are a dedicated team working to make a positive impact in our community through various initiatives and support programs.</p>
+        </div>
+    </section> -->
+
+    <!-- Services Section -->
+    <section id="services">
+        <div class="section-content">
+            <h2>What We Stand For</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <i class="fas fa-hands-helping"></i>
+                    <h3>Community Support</h3>
+                    <p>Providing assistance and resources to those in need</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-hospital"></i>
+                    <h3>Healthcare Assistance</h3>
+                    <p>Ensuring no one is left behind in our community</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-heart"></i>
+                    <h3>Mental Health Support</h3>
+                    <p>Professional support for mental health and well-being</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="donate" style="background-color: darkgoldenrod;">
+        <div class="section-content donation">
+            <h2 style="margin-bottom: 0; color: #ffffff;">Make a Difference</h2>
+            <a href="#" class="donate-button">Donate Now</a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="section-content">
+            <h2>Get in Touch</h2>
+            <div class="contact-info">
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <p>--@--</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <p>+1 (000) 000-0000</p>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <p>University Of Toronto Scarborough</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="Footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>HOPE</h3>
+                <p>Making a difference in our community</p>
+            </div>
+            <!-- <div class="footer-section">
+                <h3>Quick Links</h3>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#donate">Donate</a>
+                <a href="#contact">Contact</a>
+            </div> -->
+            <!-- <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-links">
+                    <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </div> -->
+        </div>
+        <div class="footer-bottom">
+            <p>2025 HOPE: A University Of Toronto Student Run Club</p>
+        </div>
+    </footer>
+
+    <script src="logic.js"></script>
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+            const nav = document.getElementById('mainNav');
+            nav.classList.toggle('show');
+        });
+    </script>
 </body>
+</html>

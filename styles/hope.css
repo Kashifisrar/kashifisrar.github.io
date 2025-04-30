@@ -1,161 +1,359 @@
-#outterbox {
-    width: 400px;
-    height: 60%;
-    display: flex;
-    flex-direction: row;
-    background-color: rgba(0, 0, 0, 0);
-    align-items: center;
-    justify-content: center;
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
-#Header{
-    z-index: 1000;
+
+body {
+    font-family: 'Plus Jakarta Sans','Inter', sans-serif;
+    font-weight: 800;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fffaf0; /* Floral white background */
+}
+
+/* Header Styles */
+#Header {
+    background-color: #fffaf000;
+    backdrop-filter: blur(10px);
     position: fixed;
     width: 100%;
     top: 0;
-    left: 0;
-    height: 50px;
-    background-color: white;
+    z-index: 1000;
 }
-#innerbox{
-    height: 90%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+
+#innerHeader {
+    transition: background-color 0.3s ease;
     border-radius: 10px;
-    background-image: url("styles/back.jpg");
-    border: 1px solid rgba(128, 109, 0, 0);
-    background-size: cover;
-}
-.leftbox{
-    z-index: 5;
+    max-width: 1200px;
+    margin: 0 auto;
+    margin-top: 0.5rem;
+    padding: .5rem;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    width: 80%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
-}
-.rightbox{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    width: 20%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.5);
-}
-
-.centext {
-    text-align: center;
-    font-size: xxx-large;
-    color: #333;
-    margin: 20px;
-    font-family: "Hubot Sans", sans-serif;
-    font-weight: 800;
-}
-
-#nametright {
-    position: fixed;
-    left: 3%;
-    top: 5.5px;
-}
-.companytext{
-    font-size: 30px;
-    color: rgb(128, 109, 0);
-    margin: 0;
-    font-family: "Hubot Sans", sans-serif;
-    font-weight: 800;
-}
-.menutext{
-    font-size: 20px;
-    color: rgb(94, 94, 94);
-    margin: 0;
-    font-family: "Hubot Sans", sans-serif;
-    font-weight: 300;
-}
-
-.hover:hover {
-    color: rgb(128, 109, 0);
-    text-decoration: none;
-    font-family: "book", serif;
-}
-#menutleft {
-    position: fixed;
-    display: flex;
-    right: 4%;
-    top: 14px;
-    flex-direction: row-reverse;
+    justify-content: space-between;
     align-items: center;
-    justify-content: flex-start;
-    gap: 12%;
 }
-.but{
-    text-decoration: none;
-}
-.textgeneric {
-    font-size: 50px;
-    width: 500px;
-    padding-right: 5%;
-    color: rgb(133, 116, 18);
-    margin: 0;
-    text-align: right;
-    font-family: "Hubot Sans", sans-serif;
+
+#logo h1 {
+    font-size: 2rem;
     font-weight: 900;
-    line-height: 45px;
+    color: #ffffff; /* Goldenrod */
 }
-.righttext{
-    font-size:140px;
-    text-align: left;
-    /*margin-bottom: 125px;*/
 
+#mainNav {
+    display: flex;
+    gap: 2rem;
 }
-.destext{
-    font-size: 50px;
-    color: rgb(255, 255, 255);
-    margin: 0;
-    text-align: center;
-    font-family: "Hubot Sans", sans-serif;
+
+.nav-link {
+    text-decoration: none;
+    color: #ffffff; /* Dark goldenrod */
     font-weight: 500;
-    line-height: 45px;
+    transition: color 0.3s ease;
 }
-.footertext{
-    font-size: 30px;
-    color: rgba(255, 255, 255, 0.53);
-    margin: -9px;
+
+.nav-link:hover {
+    color: #ffd700; /* Gold */
+}
+
+/* Hero Section */
+#hero {
+    min-height: 63vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6rem 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(
+        45deg,
+        #988518,
+        #daa520,
+        #b8860b,
+        #b09b26,
+        #d9ab38,
+        #91711f
+    );
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+    z-index: -1;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.hero-content {
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: #fffaf0; /* Light text for better contrast */
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #fffaf0; /* Light text for better contrast */
+}
+
+.hero-icon i {
+    font-size: 8rem;
+    color: #fffaf0; /* Light icon for better contrast */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Buttons */
+.cta-button, .donate-button {
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0);
+    display: inline-block;
+    padding: 1rem 2rem;
+    background-color: #ffffff; /* Goldenrod */
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 900;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover, .donate-button:hover {
+    transition: box-shadow 0.3s ease;
+    color: #b8860b; /* Dark goldenrod */
+    box-shadow: 0 0 60px 12px rgba(255, 255, 255, 0.5);
+}
+
+/* Sections */
+section {
+    padding: 5rem 2rem;
+}
+
+.section-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.donation{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #b8860b; /* Dark goldenrod */
     text-align: center;
-    font-family: "Hubot Sans", sans-serif;
-    font-weight: 300;
-    line-height: 45px;
-}
-.small{
-    font-size: 30px;
 }
 
-@media (max-width: 700px) {
-    #menutleft {
-        display: none;
+/* Services Grid */
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.service-card {
+    background: #fffaf0; /* Floral white */
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(218, 165, 32, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid #ffd700; /* Gold */
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(218, 165, 32, 0.2);
+}
+
+.service-card i {
+    font-size: 3rem;
+    color: #daa520; /* Goldenrod */
+    margin-bottom: 1rem;
+}
+
+/* Contact Section */
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.contact-item {
+    text-align: center;
+    padding: 2rem;
+    background: #fffaf0; /* Floral white */
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(218, 165, 32, 0.1);
+    border: 1px solid #ffd700; /* Gold */
+}
+
+.contact-item i {
+    font-size: 2rem;
+    color: #daa520; /* Goldenrod */
+    margin-bottom: 1rem;
+}
+
+/* Footer */
+#Footer {
+    background-color: #000000; /* Dark goldenrod */
+    color: white;
+    padding: 4rem 2rem 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.footer-section h3 {
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    color: #ffd700; /* Gold */
+}
+
+.footer-section a {
+    color: #fffaf0; /* Floral white */
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-section a:hover {
+    color: #ffd700; /* Gold */
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    color: #fffaf0; /* Floral white */
+}
+
+.social-links a:hover {
+    color: #ffd700; /* Gold */
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 215, 0, 0.3);
+}
+
+/* Mobile Menu */
+#mobileMenuBtn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: #b8860b; /* Dark goldenrod */
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    #mobileMenuBtn {
+        display: block;
     }
-    .imagemain{
+
+    #mainNav {
         display: none;
-    }
-    .textgeneric {
-        font-size: 10vw;
-        width: 100vw;
         position: absolute;
-        right: 2vw;
-        color: rgb(133, 116, 18);
-        margin: 0;
-        text-align: right;
-        font-family: "Hubot Sans", sans-serif;
-        font-weight: 900;
-        line-height: 10vw;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fffaf0; /* Floral white */
+        padding: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+        box-shadow: 0 2px 10px rgba(218, 165, 32, 0.1);
     }
-    .righttext{
-        display: none;
+
+    #mainNav.show {
+        display: flex;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-icon i {
+        font-size: 6rem;
     }
 }
-@media (min-width: 700px) {
 
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.service-card, .contact-item {
+    animation: fadeIn 0.5s ease-out;
 }
