@@ -33,6 +33,40 @@ body {
     padding: 1.5rem 2rem 1.5rem 2rem;
 }
 
+.logo-area {
+    position: relative;
+}
+.logo-text-only, .logo-text-pigeon {
+    min-width: 4.5em;
+    font-size: 1.7rem;
+    font-weight: 900;
+    letter-spacing: 1px;
+    align-items: center;
+    display: flex;
+    transition: opacity 0.35s cubic-bezier(.4,0,.2,1), filter 0.35s cubic-bezier(.4,0,.2,1);
+}
+.logo-visible {
+    opacity: 1;
+    pointer-events: auto;
+    position: relative;
+    filter: none;
+}
+.logo-hidden {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    left: 0;
+    top: 0;
+    filter: none;
+}
+.logo-blur {
+    filter: blur(4px);
+}
+
+.logo-text-pigeon {
+    display: none;
+}
+
 .logo-area .logo-text {
     font-family: 'Exo 2', 'Inter', sans-serif;
     font-weight: 900;
@@ -65,7 +99,6 @@ body {
     background: #fff;
     padding-top: 7rem;
     padding-bottom: 2rem;
-    min-height: 60vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -74,11 +107,7 @@ body {
 
 .hero-inner {
     display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 3rem;
-    width: 100%;
-    max-width: 900px;
 }
 
 .hero-bird {
@@ -86,6 +115,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-left: 4rem;
 }
 
 .hero-content {
@@ -339,6 +369,10 @@ body {
     .team-placeholder {
         height: 100px;
     }
+    .hero-pigeon-img {
+        max-width: 120px;
+        margin-bottom: 1.2rem;
+    }
 }
 
 @media (max-width: 600px) {
@@ -359,6 +393,9 @@ body {
     }
     .updates-title {
         font-size: 1rem;
+    }
+    .hero-pigeon-img {
+        max-width: 90px;
     }
 }
 
@@ -474,4 +511,35 @@ body, html {
     .hero-section, .mission-section, .org-banner, .team-section, .updates-footer, .site-footer {
         margin-bottom: 1.5rem;
     }
+}
+
+.hero-pigeon-img {
+    display: block;
+    max-width: 180px;
+    width: 100%;
+    height: auto;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 0;
+    object-fit: contain;
+    filter: drop-shadow(0 2px 12px rgba(0,0,0,0.10));
+}
+
+.logo-pigeon-img {
+    display: inline-block;
+    vertical-align: middle;
+    max-height: 1.2em;
+    width: auto;
+    margin: 0 0.08em 0 0.08em;
+    object-fit: contain;
+    filter: drop-shadow(0 1px 4px rgba(0,0,0,0.10));
+}
+
+.logo-text {
+    display: flex;
+    align-items: center;
+    gap: 0.08em;
+    font-size: 1.7rem;
+    font-weight: 900;
+    letter-spacing: 1px;
 }

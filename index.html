@@ -16,7 +16,12 @@
     <header class="main-header">
         <div class="header-inner">
             <div class="logo-area">
-                <span class="logo-text">HOPE</span>
+                <span class="logo-text logo-text-only logo-visible" id="logoTextOnly">HOPE</span>
+                <span class="logo-text logo-text-pigeon logo-hidden" id="logoTextPigeon">
+                  H
+                  <img src="images/pigeon.png" alt="Pigeon logo" class="logo-pigeon-img" />
+                  PE
+                </span>
             </div>
             <nav class="main-nav">
                 <a href="#team">team</a>
@@ -30,11 +35,8 @@
     <section class="hero-section">
         <div class="hero-inner">
             <div class="hero-bird">
-                <!-- Bird SVG -->
-                <svg width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M60 10C70 40 110 30 110 60C110 90 70 110 60 110C50 110 10 90 10 60C10 30 50 40 60 10Z" fill="black"/>
-                    <path d="M60 30C65 50 90 45 90 60C90 75 65 90 60 90C55 90 30 75 30 60C30 45 55 50 60 30Z" fill="white" fill-opacity="0.1"/>
-                </svg>
+                <!-- Pigeon Image -->
+                <img src="images/pigeon.png" alt="Pigeon logo" class="hero-pigeon-img" />
             </div>
             <div class="hero-content">
                 <h1>EMPOWERING<br>FUTURES<br>THROUGH <span class="highlight">HEALTHCARE</span></h1>
@@ -72,12 +74,8 @@
     <!-- Banner -->
     <div class="org-banner">
         <span class="banner-logo">
-            <!-- Bird as O in HOPE -->
             H
-            <svg width="28" height="28" viewBox="0 0 28 28" style="vertical-align:middle;" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="14" cy="14" r="13" fill="black"/>
-                <path d="M14 4C17 12 24 10 24 14C24 18 17 24 14 24C11 24 4 18 4 14C4 10 11 12 14 4Z" fill="white" fill-opacity="0.2"/>
-            </svg>
+            <img src="images/pigeon.png" alt="Pigeon logo" class="logo-pigeon-img" />
             PE
         </span>
         <span class="banner-desc">A STUDENT LED ORGANIZATION</span>
@@ -126,3 +124,32 @@
     </footer>
 </body>
 </html>
+<script>
+// Logo swap on scroll with blur only on outgoing logo
+let logoState = 'text';
+window.addEventListener('scroll', function() {
+  var textOnly = document.getElementById('logoTextOnly');
+  var pigeon = document.getElementById('logoTextPigeon');
+  if (window.scrollY > 40 && logoState === 'text') {
+    // Blur and hide text logo, fade in pigeon logo
+    textOnly.classList.add('logo-blur');
+    setTimeout(function() {
+      textOnly.classList.remove('logo-visible', 'logo-blur');
+      textOnly.classList.add('logo-hidden');
+      pigeon.classList.remove('logo-hidden');
+      pigeon.classList.add('logo-visible');
+    }, 200);
+    logoState = 'pigeon';
+  } else if (window.scrollY <= 40 && logoState === 'pigeon') {
+    // Blur and hide pigeon logo, fade in text logo
+    pigeon.classList.add('logo-blur');
+    setTimeout(function() {
+      pigeon.classList.remove('logo-visible', 'logo-blur');
+      pigeon.classList.add('logo-hidden');
+      textOnly.classList.remove('logo-hidden');
+      textOnly.classList.add('logo-visible');
+    }, 200);
+    logoState = 'text';
+  }
+});
+</script>
