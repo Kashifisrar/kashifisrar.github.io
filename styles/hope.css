@@ -6,8 +6,8 @@
 }
 
 body {
-    font-family: 'Plus Jakarta Sans','Inter', sans-serif;
-    font-weight: 800;
+    font-family: 'Futura', 'Inter', Arial, sans-serif;
+    font-weight: 500;
     line-height: 1.6;
     color: #333;
     background-color: #fffaf0; /* Floral white background */
@@ -16,34 +16,41 @@ body {
 /* Header Styles */
 .main-header {
     width: 100%;
-    background: #fff;
-    position: fixed;
+    background: transparent;
+    position: absolute;
     top: 0;
     left: 0;
     z-index: 100;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    box-shadow: none;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    transition: background 0.3s;
 }
 
 .header-inner {
-    max-width: 1200px;
+    max-width: 1000px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5rem 2rem 1.5rem 2rem;
+    padding: 1rem 1.5rem 0.65rem 1.5rem;
+    border-radius: 0;
+    background: transparent;
 }
 
 .logo-area {
     position: relative;
 }
 .logo-text-only, .logo-text-pigeon {
-    min-width: 4.5em;
     font-size: 1.7rem;
     font-weight: 900;
     letter-spacing: 1px;
     align-items: center;
     display: flex;
     transition: opacity 0.35s cubic-bezier(.4,0,.2,1), filter 0.35s cubic-bezier(.4,0,.2,1);
+    color: #111;
+    text-shadow: none;
+    font-family: 'Futura', 'Inter', Arial, sans-serif;
 }
 .logo-visible {
     opacity: 1;
@@ -68,10 +75,10 @@ body {
 }
 
 .logo-area .logo-text {
-    font-family: 'Exo 2', 'Inter', sans-serif;
+    font-family: 'Futura', 'Inter', Arial, sans-serif;
     font-weight: 900;
     font-size: 1.5rem;
-    color: #111;
+    color: #000000;
     letter-spacing: 1px;
 }
 
@@ -81,24 +88,27 @@ body {
 }
 
 .main-nav a {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Futura', 'Inter', Arial, sans-serif;
     font-size: 1rem;
-    color: #222;
+    color: #111;
     text-decoration: none;
     font-weight: 400;
     letter-spacing: 0.5px;
-    transition: color 0.2s;
+    transition: color 0.2s, border-bottom 0.2s;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 2px;
 }
 
-.main-nav a:hover {
+.main-nav a:hover, .main-nav a:focus-visible {
     color: #FFD600;
+    border-bottom: 2px solid #FFD600;
 }
 
 /* Hero Section */
 .hero-section {
     background: #fff;
-    padding-top: 7rem;
-    padding-bottom: 2rem;
+    padding-top: 13rem;
+    padding-bottom: 1rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -107,7 +117,7 @@ body {
 
 .hero-inner {
     display: flex;
-    gap: 3rem;
+    gap: 1rem;
 }
 
 .hero-bird {
@@ -115,7 +125,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 4rem;
 }
 
 .hero-content {
@@ -127,8 +136,8 @@ body {
 }
 
 .hero-content h1 {
-    font-family: 'Exo 2', 'Inter', sans-serif;
-    font-size: 2.5rem;
+    font-family: 'Futura', 'Inter', Arial, sans-serif;
+    font-size: 3.5rem;
     font-weight: 900;
     color: #111;
     line-height: 1.1;
@@ -147,7 +156,7 @@ body {
 .yellow-btn {
     background: #FFD600;
     color: #111;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Futura', 'Inter', Arial, sans-serif;
     font-weight: 900;
     font-size: 1rem;
     border: none;
@@ -165,7 +174,7 @@ body {
 }
 
 .down-arrow {
-    margin-top: 2.5rem;
+    margin-top: 9rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -173,8 +182,8 @@ body {
 
 /* Mission Section */
 .mission-section {
-    background: #f7f7f7;
-    padding: 3.5rem 0 3.5rem 0;
+    background: linear-gradient(180deg, #f7f7f7 70%, #cfcfcf 100%);
+    padding: 4rem 0 4rem 0;
     display: flex;
     justify-content: center;
 }
@@ -189,9 +198,9 @@ body {
 }
 
 .mission-text h2 {
-    font-family: 'Exo 2', 'Inter', sans-serif;
+    font-family: 'Futura', 'Inter', Arial, sans-serif;
     font-size: 2rem;
-    font-weight: 900;
+    font-weight: 700;
     color: #111;
     line-height: 1.1;
     margin-bottom: 1.5rem;
@@ -216,16 +225,15 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 2rem;
     padding: 1.2rem 0;
-    font-family: 'Exo 2', 'Inter', sans-serif;
+    font-family: 'Futura', 'Inter', Arial, sans-serif;
     font-size: 1.2rem;
     font-weight: 700;
     letter-spacing: 1px;
 }
 
 .banner-logo {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: 900;
     display: flex;
     align-items: center;
@@ -236,22 +244,21 @@ body {
     font-size: 1rem;
     font-weight: 400;
     color: #fff;
-    opacity: 0.85;
     margin-left: 1.5rem;
     letter-spacing: 1px;
 }
 
 /* Team Section */
 .team-section {
-    background: #f7f7f7;
+    background: linear-gradient(0deg, #f7f7f7 70%, #cfcfcf 100%);
     padding: 3.5rem 0 3.5rem 0;
     text-align: center;
 }
 
 .team-section h2 {
-    font-family: 'Exo 2', 'Inter', sans-serif;
+    font-family: 'Futura', 'Inter', Arial, sans-serif;
     font-size: 2rem;
-    font-weight: 900;
+    font-weight: 700;
     color: #111;
     margin-bottom: 2.5rem;
 }
@@ -278,21 +285,21 @@ body {
     margin: 0 auto;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 2rem;
 }
 
 .updates-left {
-    flex: 0 0 220px;
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
+    text-align: right;
 }
 
 .updates-title {
-    font-family: 'Exo 2', 'Inter', sans-serif;
-    font-size: 1.3rem;
-    font-weight: 900;
+    font-family: 'Futura', 'Inter', Arial, sans-serif;
+    font-size: 2rem;
+    font-weight: 600;
     color: #fff;
     letter-spacing: 1px;
     line-height: 1.1;
@@ -316,7 +323,7 @@ body {
 }
 
 .event-title {
-    font-family: 'Exo 2', 'Inter', sans-serif;
+    font-family: 'Futura', 'Inter', Arial, sans-serif;
     font-size: 1.1rem;
     font-weight: 900;
     color: #111;
@@ -326,7 +333,7 @@ body {
 .event-location {
     font-size: 0.95rem;
     color: #444;
-    margin-left: 0.5rem;
+    margin-left: 0rem;
 }
 
 .event-date {
@@ -420,11 +427,15 @@ html {
 }
 
 .site-footer {
-    background: #181818;
+    background: linear-gradient(120deg, #181818 70%, #232323 100%);
     color: #fff;
-    padding: 2rem 0 1.2rem 0;
-    font-size: 1rem;
+    padding: 3.5rem 0 2.2rem 0;
+    font-size: 1.15rem;
     letter-spacing: 0.5px;
+    box-shadow: 0 -2px 24px 0 rgba(0,0,0,0.18);
+    border-top: 3px solid #FFD600;
+    position: relative;
+    z-index: 10;
 }
 .footer-inner {
     max-width: 1100px;
@@ -433,37 +444,79 @@ html {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 3.5rem;
     flex-wrap: wrap;
+    padding: 0 2rem;
 }
 .footer-info {
     display: flex;
     flex-direction: column;
-    gap: 0.3rem;
-    font-size: 1rem;
-    opacity: 0.85;
+    gap: 0.7rem;
+    font-size: 1.18rem;
+    opacity: 0.92;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    line-height: 1.5;
 }
 .footer-social {
     display: flex;
-    gap: 1.2rem;
+    gap: 2rem;
 }
 .footer-social-link {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    background: #222;
-    width: 38px;
-    height: 38px;
-    transition: background 0.2s, box-shadow 0.2s;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    background: #232323;
+    width: 52px;
+    height: 52px;
+    transition: background 0.2s, box-shadow 0.2s, transform 0.18s;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.13);
+    border: 2px solid #FFD60022;
 }
 .footer-social-link:hover, .footer-social-link:focus-visible {
     background: #FFD600;
-    outline: none;
+    box-shadow: 0 0 16px #FFD60055;
+    transform: translateY(-2px) scale(1.08);
 }
 .footer-social-link svg {
-    display: block;
+    width: 28px;
+    height: 28px;
+}
+@media (max-width: 900px) {
+    .footer-inner {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2.2rem;
+        padding: 0 1.2rem;
+    }
+    .footer-info {
+        font-size: 1.05rem;
+    }
+    .footer-social-link {
+        width: 44px;
+        height: 44px;
+    }
+    .footer-social-link svg {
+        width: 22px;
+        height: 22px;
+    }
+}
+@media (max-width: 600px) {
+    .site-footer {
+        padding: 2.2rem 0 1.2rem 0;
+        font-size: 1rem;
+    }
+    .footer-inner {
+        padding: 0 0.5rem;
+        gap: 1.2rem;
+    }
+    .footer-info {
+        font-size: 0.98rem;
+    }
+    .footer-social {
+        gap: 1.1rem;
+    }
 }
 
 /* Focus styles for accessibility */
@@ -485,6 +538,9 @@ a:focus-visible, button:focus-visible {
     }
     .footer-info {
         font-size: 0.95rem;
+    }
+    .down-arrow {
+        margin-top: 2rem;
     }
 }
 
@@ -515,14 +571,14 @@ body, html {
 
 .hero-pigeon-img {
     display: block;
-    max-width: 180px;
+    max-width: 261px;
     width: 100%;
     height: auto;
     margin-right: 0;
     margin-left: 0;
     margin-bottom: 0;
     object-fit: contain;
-    filter: drop-shadow(0 2px 12px rgba(0,0,0,0.10));
+    filter: invert(1);
 }
 
 .logo-pigeon-img {
@@ -542,4 +598,24 @@ body, html {
     font-size: 1.7rem;
     font-weight: 900;
     letter-spacing: 1px;
+}
+
+.hero-animate-container {
+    font-size: 3.5rem;
+    font-weight: 500;
+    min-height: 4.2rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+#hero-animate-word {
+    display: inline-block;
+    transition: opacity 0.4s, transform 0.4s;
+}
+.fade-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+.fade-out {
+    opacity: 0;
+    transform: translateY(20px);
 }
