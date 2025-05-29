@@ -555,6 +555,7 @@ a:focus-visible, button:focus-visible {
     .down-arrow {
         margin-top: 2rem;
     }
+    
 }
 
 /* Subtle card/button polish */
@@ -574,13 +575,39 @@ body, html {
     max-width: 100%;
     height: auto;
 }
-
+.hero-content h1 {
+    margin-bottom: 0;
+    font-weight: 500;
+    font-size: 3.5rem;
+}
 /* Improve spacing between sections on mobile */
 @media (max-width: 600px) {
     .hero-section, .mission-section, .org-banner, .team-section, .updates-footer, .site-footer {
         margin-bottom: 1.5rem;
     }
+    .team-section {
+        margin: 0;
+    }
+    .updates-footer {
+        margin: 0;
+    }
+    .org-banner {
+        margin: 0;
+    }
+    .mission-section {
+        margin: 0;
+    }
+    .hero-section {
+        margin: 0;
+    }
+    .site-footer {
+        margin: 0;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
 }
+
 
 .hero-pigeon-img {
     display: block;
